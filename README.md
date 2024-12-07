@@ -1,6 +1,6 @@
 # Project 2: Haskell
 
-*Created for COMP30020_2024 Declarative Programming in Semester 2 of 2024 for the University of Melbourne*
+*Created for COMP30020 Declarative Programming in Semester 2 of 2024 for the University of Melbourne*
 
 ---
 
