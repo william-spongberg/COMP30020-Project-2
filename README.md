@@ -15,7 +15,7 @@ Find details on the assignment [here](assignment_details.md).
 
 ## How to run
 
-- Clone repo
-- cd into src
-- Compile using "ghc -prof -fprof-auto -rtsopts -o Main Main.hs"
-- Run using "./Main +RTS -p"
+1. Clone the repository.
+2. Change directory into `src`.
+3. Compile using `ghc -prof -fprof-auto -rtsopts -o Main Main.hs`.
+4. Run using `./Main +RTS -p`.
