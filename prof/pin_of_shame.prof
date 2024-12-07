@@ -1,0 +1,75 @@
+	Wed Sep 25 12:08 2024 Time and Allocation Profiling Report  (Final)
+
+	   Main +RTS -p -RTS
+
+	total time  =     5459.55 secs   (5459552 ticks @ 1000 us, 1 processor)
+	total alloc = 4,887,901,445,408 bytes  (excludes profiling overheads)
+
+COST CENTRE                MODULE    SRC                %time %alloc
+
+isDistinctList             Proj2     Proj2.hs:31:1-54    91.4   60.0
+generateAllHaikus.part_b.\ Proj2     Proj2.hs:86:32-48    7.6   34.4
+generateAllHaikus.part_b   Proj2     Proj2.hs:86:5-54     0.6    5.5
+
+
+                                                                                                    individual      inherited
+COST CENTRE                     MODULE                SRC                        no.     entries  %time %alloc   %time %alloc
+
+MAIN                            MAIN                  <built-in>                 209           0    0.0    0.0   100.0  100.0
+ CAF                            Debug.Trace           <entire-module>            376           0    0.0    0.0     0.0    0.0
+ CAF                            GHC.Conc.Signal       <entire-module>            362           0    0.0    0.0     0.0    0.0
+ CAF                            GHC.Event.Control     <entire-module>            356           0    0.0    0.0     0.0    0.0
+ CAF                            GHC.Event.Thread      <entire-module>            347           0    0.0    0.0     0.0    0.0
+ CAF                            GHC.IO.Encoding       <entire-module>            327           0    0.0    0.0     0.0    0.0
+ CAF                            GHC.IO.Encoding.Iconv <entire-module>            325           0    0.0    0.0     0.0    0.0
+ CAF                            GHC.IO.Exception      <entire-module>            319           0    0.0    0.0     0.0    0.0
+ CAF                            GHC.IO.FD             <entire-module>            318           0    0.0    0.0     0.0    0.0
+ CAF                            GHC.IO.Handle.FD      <entire-module>            316           0    0.0    0.0     0.0    0.0
+ CAF                            GHC.Read              <entire-module>            300           0    0.0    0.0     0.0    0.0
+ CAF                            GHC.TopHandler        <entire-module>            290           0    0.0    0.0     0.0    0.0
+ CAF                            Words                 <entire-module>            219           0    0.0    0.0     0.0    0.0
+  syllables                     Words                 Words.hs:(43,1)-(44,84)    433           1    0.0    0.0     0.0    0.0
+  wordToSyllablesData           Words                 Words.hs:28:1-89           436           1    0.0    0.0     0.0    0.0
+  wordToSyllablesMap            Words                 Words.hs:(35,1)-(40,25)    435           1    0.0    0.0     0.0    0.0
+   wordToSyllablesMap.\         Words                 Words.hs:(37,21)-(38,86)   437       36475    0.0    0.0     0.0    0.0
+    wordToSyllablesMap.\.words  Words                 Words.hs:37:25-44          438       36475    0.0    0.0     0.0    0.0
+ CAF                            Proj2                 <entire-module>            217           0    0.0    0.0     0.0    0.0
+  generateAllHaikus             Proj2                 Proj2.hs:(62,1)-(94,29)    424           0    0.0    0.0     0.0    0.0
+   generateAllHaikus.g5         Proj2                 Proj2.hs:70:5-15           425           1    0.0    0.0     0.0    0.0
+    part                        Proj2                 Proj2.hs:(141,1)-(142,176) 426           1    0.0    0.0     0.0    0.0
+   generateAllHaikus.g7         Proj2                 Proj2.hs:71:5-15           450           1    0.0    0.0     0.0    0.0
+    part                        Proj2                 Proj2.hs:(141,1)-(142,176) 451           1    0.0    0.0     0.0    0.0
+ CAF                            Main                  <entire-module>            216           0    0.0    0.0     0.0    0.0
+  main                          Main                  Main.hs:77:1-72            418           1    0.0    0.0     0.0    0.0
+  sampleWordlists               Main                  Main.hs:(59,1)-(67,3)      420           1    0.0    0.0     0.0    0.0
+ main                           Main                  Main.hs:77:1-72            419           0    0.0    0.0   100.0  100.0
+  generateAllHaikus             Proj2                 Proj2.hs:(62,1)-(94,29)    422           2    0.0    0.0   100.0  100.0
+   generateAllHaikus.ans        Proj2                 Proj2.hs:94:5-29           462           2    0.0    0.0     0.0    0.0
+   generateAllHaikus.filtered_b Proj2                 Proj2.hs:88:5-45           458           2    0.4    0.0    91.8   60.0
+    isDistinctList              Proj2                 Proj2.hs:31:1-54           459  4837337547   91.4   60.0    91.4   60.0
+   generateAllHaikus.five       Proj2                 Proj2.hs:83:5-36           444           2    0.0    0.0     0.0    0.0
+   generateAllHaikus.m          Proj2                 Proj2.hs:66:5-74           430           2    0.0    0.0     0.0    0.0
+    wordsToMap                  Proj2                 Proj2.hs:34:1-66           431           4    0.0    0.0     0.0    0.0
+     getSyllables               Proj2                 Proj2.hs:38:1-48           432          26    0.0    0.0     0.0    0.0
+      syllables                 Words                 Words.hs:(43,1)-(44,84)    434           0    0.0    0.0     0.0    0.0
+   generateAllHaikus.p5         Proj2                 Proj2.hs:72:5-80           423           2    0.0    0.0     0.0    0.0
+    bIna                        Proj2                 Proj2.hs:50:1-23           427           4    0.0    0.0     0.0    0.0
+   generateAllHaikus.p7         Proj2                 Proj2.hs:73:5-80           449           2    0.0    0.0     0.0    0.0
+    bIna                        Proj2                 Proj2.hs:50:1-23           452           4    0.0    0.0     0.0    0.0
+   generateAllHaikus.part_a     Proj2                 Proj2.hs:90:5-82           445           2    0.0    0.0     0.0    0.0
+    generateAllHaikus.part_a.\  Proj2                 Proj2.hs:90:32-76          446           3    0.0    0.0     0.0    0.0
+     disjoint                   Proj2                 Proj2.hs:121:1-41          461     5653444    0.0    0.0     0.0    0.0
+   generateAllHaikus.part_b     Proj2                 Proj2.hs:86:5-54           447           2    0.6    5.5     8.2   40.0
+    generateAllHaikus.part_b.\  Proj2                 Proj2.hs:86:32-48          448       14479    7.6   34.4     7.6   34.4
+   generateAllHaikus.s          Proj2                 Proj2.hs:69:5-63           428           2    0.0    0.0     0.0    0.0
+    getValues                   Proj2                 Proj2.hs:46:1-40           429           4    0.0    0.0     0.0    0.0
+   generateAllHaikus.seven      Proj2                 Proj2.hs:84:5-37           457           2    0.0    0.0     0.0    0.0
+   generateAllHaikus.w5         Proj2                 Proj2.hs:80:5-29           440           2    0.0    0.0     0.0    0.0
+    genCombinations             Proj2                 Proj2.hs:128:1-81          441           2    0.0    0.0     0.0    0.0
+     isDistinctList             Proj2                 Proj2.hs:31:1-54           443        2549    0.0    0.0     0.0    0.0
+     getWordsWithSyll           Proj2                 Proj2.hs:42:1-67           442          18    0.0    0.0     0.0    0.0
+   generateAllHaikus.w7         Proj2                 Proj2.hs:81:5-29           453           2    0.0    0.0     0.0    0.0
+    genCombinations             Proj2                 Proj2.hs:128:1-81          454           2    0.0    0.0     0.0    0.0
+     isDistinctList             Proj2                 Proj2.hs:31:1-54           456       90046    0.0    0.0     0.0    0.0
+     getWordsWithSyll           Proj2                 Proj2.hs:42:1-67           455          31    0.0    0.0     0.0    0.0
+  printRun                      Main                  Main.hs:(70,1)-(74,13)     421           2    0.0    0.0     0.0    0.0

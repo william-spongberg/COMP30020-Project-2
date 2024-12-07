@@ -1,0 +1,66 @@
+	Tue Oct 15 16:15 2024 Time and Allocation Profiling Report  (Final)
+
+	   Main +RTS -p -RTS
+
+	total time  =        5.23 secs   (5229 ticks @ 1000 us, 1 processor)
+	total alloc = 10,107,779,312 bytes  (excludes profiling overheads)
+
+COST CENTRE          MODULE       SRC                             %time %alloc
+
+generatePoems        Proj2        Proj2.hs:(66,1)-(70,22)          95.1   95.4
+distinct             ProblemSetup ProblemSetup.hs:(16,1)-(17,48)    2.7    0.8
+wordToSyllablesMap.\ Words        Words.hs:(37,21)-(38,86)          1.1    1.6
+canGenerateWords.\   Proj2        Proj2.hs:(93,9)-(94,81)           0.5    1.3
+
+
+                                                                                                             individual      inherited
+COST CENTRE                          MODULE                SRC                            no.     entries  %time %alloc   %time %alloc
+
+MAIN                                 MAIN                  <built-in>                     209           0    0.0    0.0   100.0  100.0
+ CAF                                 GHC.Conc.Signal       <entire-module>                363           0    0.0    0.0     0.0    0.0
+ CAF                                 GHC.IO.Encoding       <entire-module>                328           0    0.0    0.0     0.0    0.0
+ CAF                                 GHC.IO.Encoding.Iconv <entire-module>                326           0    0.0    0.0     0.0    0.0
+ CAF                                 GHC.IO.FD             <entire-module>                319           0    0.0    0.0     0.0    0.0
+ CAF                                 GHC.IO.Handle.FD      <entire-module>                317           0    0.0    0.0     0.0    0.0
+ CAF                                 GHC.Read              <entire-module>                301           0    0.0    0.0     0.0    0.0
+ CAF                                 Words                 <entire-module>                219           0    0.0    0.0     1.2    1.8
+  syllables                          Words                 Words.hs:(43,1)-(44,84)        436           1    0.0    0.0     0.0    0.0
+  wordToSyllablesData                Words                 Words.hs:28:1-89               439           1    0.0    0.0     0.0    0.0
+  wordToSyllablesMap                 Words                 Words.hs:(35,1)-(40,25)        438           1    0.1    0.1     1.2    1.7
+   wordToSyllablesMap.\              Words                 Words.hs:(37,21)-(38,86)       440       36475    1.1    1.6     1.1    1.7
+    wordToSyllablesMap.\.words       Words                 Words.hs:37:25-44              441       36475    0.0    0.1     0.0    0.1
+ CAF                                 Proj2                 <entire-module>                217           0    0.0    0.0     0.0    0.0
+ CAF                                 Main                  <entire-module>                216           0    0.0    0.0    98.7   98.2
+  main                               Main                  Main.hs:77:1-72                418           1    0.0    0.0    98.7   98.2
+   generateAllHaikus                 Proj2                 Proj2.hs:(31,1)-(35,43)        423           2    0.0    0.0    98.7   98.2
+    generateAllHaikus.haikuSyllables Proj2                 Proj2.hs:34:5-51               425           2    0.0    0.0     3.2    2.2
+     findHaikuSyllables              Proj2                 Proj2.hs:(48,1)-(52,45)        426           2    0.0    0.0     3.2    2.2
+      mergeLists                     Proj2                 Proj2.hs:102:1-46              427           4    0.0    0.0     0.0    0.0
+      findHaikuSyllables.syllables5  Proj2                 Proj2.hs:51:5-45               428           2    0.0    0.0     0.0    0.0
+       findSyllableCombos            Proj2                 Proj2.hs:(76,1)-(83,30)        429           2    0.0    0.0     0.0    0.0
+        partitions                   Proj2                 Proj2.hs:(113,1)-(114,63)      430          64    0.0    0.0     0.0    0.0
+        canGenerateWords             Proj2                 Proj2.hs:(90,1)-(97,13)        443          14    0.0    0.0     0.0    0.0
+         canGenerateWords.\          Proj2                 Proj2.hs:(93,9)-(94,81)        444          44    0.0    0.0     0.0    0.0
+          distinct                   ProblemSetup          ProblemSetup.hs:(16,1)-(17,48) 446         364    0.0    0.0     0.0    0.0
+          canGenerateWords.\.\       Proj2                 Proj2.hs:94:40-69              445          44    0.0    0.0     0.0    0.0
+        findSyllableCombos.syllables Proj2                 Proj2.hs:83:5-30               432           2    0.0    0.0     0.0    0.0
+        isSubset                     Proj2                 Proj2.hs:108:1-33              431           2    0.0    0.0     0.0    0.0
+      findHaikuSyllables.syllables7  Proj2                 Proj2.hs:52:5-45               447           2    0.0    0.0     3.2    2.2
+       findSyllableCombos            Proj2                 Proj2.hs:(76,1)-(83,30)        448           2    0.1    0.0     3.2    2.2
+        partitions                   Proj2                 Proj2.hs:(113,1)-(114,63)      449         256    0.0    0.0     0.0    0.0
+        canGenerateWords             Proj2                 Proj2.hs:(90,1)-(97,13)        452          45    0.0    0.0     3.2    2.1
+         canGenerateWords.\          Proj2                 Proj2.hs:(93,9)-(94,81)        453         201    0.5    1.3     3.2    2.1
+          distinct                   ProblemSetup          ProblemSetup.hs:(16,1)-(17,48) 455      736220    2.7    0.8     2.7    0.8
+          canGenerateWords.\.\       Proj2                 Proj2.hs:94:40-69              454         243    0.0    0.0     0.0    0.0
+        findSyllableCombos.syllables Proj2                 Proj2.hs:83:5-30               451           2    0.0    0.0     0.0    0.0
+        isSubset                     Proj2                 Proj2.hs:108:1-33              450           2    0.0    0.0     0.0    0.0
+    generateAllHaikus.syllableMap    Proj2                 Proj2.hs:35:5-43               433           2    0.0    0.0     0.0    0.0
+     mapWordsToSyllables             Proj2                 Proj2.hs:(41,1)-(42,67)        434           2    0.0    0.0     0.0    0.0
+      getSyllables                   Proj2                 Proj2.hs:119:1-48              435          13    0.0    0.0     0.0    0.0
+       syllables                     Words                 Words.hs:(43,1)-(44,84)        437           0    0.0    0.0     0.0    0.0
+    generateHaikus                   Proj2                 Proj2.hs:(58,1)-(59,81)        424           2    0.4    0.6    95.5   96.1
+     generatePoems                   Proj2                 Proj2.hs:(66,1)-(70,22)        456    18266025   95.1   95.4    95.1   95.4
+   printRun                          Main                  Main.hs:(70,1)-(74,13)         421           2    0.0    0.0     0.0    0.0
+  sampleWordlists                    Main                  Main.hs:(59,1)-(67,3)          419           1    0.0    0.0     0.0    0.0
+ main                                Main                  Main.hs:77:1-72                420           0    0.0    0.0     0.0    0.0
+  printRun                           Main                  Main.hs:(70,1)-(74,13)         422           0    0.0    0.0     0.0    0.0
